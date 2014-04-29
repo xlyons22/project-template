@@ -7,7 +7,7 @@ var knifeY1 = 560;
 var knifeThrown1 = 0;
 var knifeX1 = 900;
 
-   
+
 var knifeY2 = 560;
 var knifeThrown2 = 0;
 var knifeX2 = 900;
@@ -18,6 +18,14 @@ var knifeThrown3 = 0;
 var knifeX3 = 900;
 
 var OK2Fire = 1;
+
+var balloon = [
+
+	{x:100, y: 100, size: 100},
+	{x: 300, y: 100, size: 100},
+	{x: 500, y: 100, size: 100}
+
+];
 
 
 // put functions here, just like kahn academy
@@ -47,6 +55,7 @@ var drawclown = function() {
 	ellipse(clownX+50,543,30,30);
 	ellipse(clownX-30,543,40,40);
 	ellipse(clownX-50,543,30,30);
+	
 
 };
 
@@ -61,11 +70,14 @@ var setup = function() {
 var draw = function() {
 
     // clear the screen
-    background(240,10,10);
+    background(255,0,0);
     // some drawing commands; feel free to change these
     fill(255, 320,0)
     // call a functon (defined up above)
     drawclown();
+    for(var i = 0; i < balloon.length; i++){
+		fill(100,234,236);
+		ellipse(balloon[i].x, balloon[i].y, balloon[i].size, balloon[i].size);
 
     if (keyIsPressed) {
 	if (keyCode === 65) {
@@ -89,7 +101,7 @@ var draw = function() {
 
 			}else if (knifeThrown3===0){
 				knifeThrown3 = 1;
-				knifeY3 = clownX;
+				knifeX3 = clownX;
 			}
 		}
 	}
@@ -103,8 +115,10 @@ var draw = function() {
 	}
 	if (OK2Fire > 10){
 		OK2Fire = 1;
+	
 
 	}
+	
 
 	if (knifeThrown1 === 1){
 		knifeY1 -= 7;
@@ -129,7 +143,10 @@ var draw = function() {
 			knifeY3=560;
 		}
 	}
+	
+	
 
+	}
 
 
 
