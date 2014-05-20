@@ -2,20 +2,25 @@
 
 //put variables here, just like khan academy
 var clownX = 400;
+	
+	var knife = [
+	{x:900,y:560,t:0},
+	{x:900,y:560,t:0},
+	{x:900,y:560,t:0}
+];
+//var knifeY1 = 560;
+//var knifeThrown1 = 0;
+//var knifeX1 = 900;
 
-var knifeY1 = 560;
-var knifeThrown1 = 0;
-var knifeX1 = 900;
+
+//var knifeY2 = 560;
+//var knifeThrown2 = 0;
+//var knifeX2 = 900;
 
 
-var knifeY2 = 560;
-var knifeThrown2 = 0;
-var knifeX2 = 900;
-
-
-var knifeY3 = 560;
-var knifeThrown3 = 0;
-var knifeX3 = 900;
+//var knifeY3 = 560;a a a
+//var knifeThrown3 = 0;
+//var knifeX3 = 900;
 
 var OK2Fire = 1;
 
