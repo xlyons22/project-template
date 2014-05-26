@@ -37,11 +37,11 @@ var balloon = [
 var drawclown = function() {
 	//knife moving1
 	fill(219,227,227);
-	rect(knifeX1, knifeY1, 5, 30);
+	rect(knife[0].x, knife[0].y, 5, 30);
 	fill(255,0,255);
-	rect(knifeX2, knifeY2, 5, 30);
+	rect(knife[1].x, knife[1].y, 5, 30);
 	fill(0,45,234);
-	rect(knifeX3, knifeY3, 5, 30);
+	rect(knife[2].x, knife[2].y, 5, 30);
 	
 	//knife fake
 	rect(clownX+50,560,5,30);
@@ -96,17 +96,17 @@ var draw = function() {
 		if (OK2Fire === 1){
 			OK2Fire = 2;
 
-			if (knifeThrown1===0){
-				knifeThrown1 = 1;
-				knifeX1 = clownX;
+			if (knife[0].size===0){
+				knife[0].size = 1;
+				knife[0].x = clownX;
 
-			}else if (knifeThrown2===0){
-				knifeThrown2 = 1;
-				knifeX2 = clownX;
+			}else if (knife[1].size===0){
+				knife[1].size = 1;
+				knife[1].x = clownX;
 
-			}else if (knifeThrown3===0){
-				knifeThrown3 = 1;
-				knifeX3 = clownX;
+			}else if (knife[2].size===0){
+				knife[2].size = 1;
+				knife[2].x = clownX;
 			}
 		}
 	}
@@ -122,30 +122,30 @@ var draw = function() {
 		OK2Fire = 1;
 	
 
-	}
+	} 
 	
 
-	if (knifeThrown1 === 1){
-		knifeY1 -= 7;
-		if (knifeY1<-16){
-			knifeThrown1=0;
-			knifeY1=560;
+	if (knife[0].size === 1){
+		knife[0].y -= 7;
+		if (knife[0].y<-16){
+			knife[0].size=0;
+			knife[0].y=560;
 		}
 	}
 
-	if (knifeThrown2 === 1){
-		knifeY2 -= 7;
-		if (knifeY2<-16){
-			knifeThrown2=0;
-			knifeY2=560;
+	if (knife[1].size === 1){
+		knife[1].y -= 7;
+		if (knife[1].y<-16){
+			knife[1].size=0;
+			knife[1].y=560;
 		}
 	}
 
-	if (knifeThrown3 === 1){
-		knifeY3 -= 7;
-		if (knifeY3<-16){
-			knifeThrown3=0;
-			knifeY3=560;
+	if (knife[2].size === 1){
+		knife[2].y -= 7;
+		if (knife[2].y<-16){
+			knife[2].size=0;
+			knife[2].y=560;
 		}
 	}
 	
