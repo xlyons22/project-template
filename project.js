@@ -155,8 +155,8 @@
  			knife[0].y -= 7;
  			if (knife[0].y < -16) {
  				knife[0].thrown = 0;
- 				knife[0].y = 56}0;
- 			
+ 				knife[0].y = 560;
+ 			}
  		}
 
  		if (knife[1].thrown === 1) {
@@ -184,12 +184,20 @@
  	//collision detection
 
 
- 	if (knife[1].x === balloon[0].x) {
+ 	if (knife[0].x > balloon[0].x-50 && knife[0].x < balloon[0].x+50 && knife[0].y > balloon[0].y+50) {
  		fill(0, 0, 0);
  		ellipse(200, 100, 100, 100);
  	}
+	if (knife[0].x > balloon[1].x-50 && knife[0].x < balloon[1].x+50 && knife[0].y > balloon[1].y+50) {
+ 		fill(0, 0, 0);
+ 		ellipse(400, 100, 100, 100);
+ 	}
 
+	if (knife[0].x > balloon[2].x-50 && knife[0].x < balloon[2].x+50 && knife[0].y > balloon[2].y+50) {
+ 		fill(0, 0, 0);
+ 		ellipse(600, 100, 100, 100);
+ 	}
 
- 
-};	  
+ };
+	  
 
