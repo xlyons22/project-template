@@ -2,7 +2,7 @@
 
  //put variables here, just like khan academy
  var clownX = 400;
-
+ 
  var knife = [
 
  	{
@@ -111,7 +111,7 @@
  		ellipse(balloon[i].x, balloon[i].y, balloon[i].size, balloon[i].size);
 
  		if (keyIsPressed) {
- 			if (keyCode === UP) {
+ 			if (keyCode === 65) {
  				clownX -= 5;
  			}
  			if (keyCode === 68) {
@@ -155,8 +155,8 @@
  			knife[0].y -= 7;
  			if (knife[0].y < -16) {
  				knife[0].thrown = 0;
- 				knife[0].y = 560;
- 			}
+ 				knife[0].y = 56}0;
+ 			
  		}
 
  		if (knife[1].thrown === 1) {
@@ -184,12 +184,12 @@
  	//collision detection
 
 
- 	if (knife[i].x === balloon[0].x) {
+ 	if (knife[1].x === balloon[0].x) {
  		fill(0, 0, 0);
  		ellipse(200, 100, 100, 100);
  	}
 
 
- };
-	  
+ 
+};	  
 
